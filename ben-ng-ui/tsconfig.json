@@ -2,26 +2,27 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    // 用于确定如何编译ts文件
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": true, // 设置为true时，将强制区分大小写。默认为false。
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
+    "noImplicitAny": true, // 当表达式和申明 类型为any时，是否需要发出警告，设置true，则不警告
+    "removeComments": false, // 用于指定是否需要输出注释，设置为true，则不输出注释
+    "sourceMap": true, // 是否生成SourceMap的开关，如果设置为true，则会生成.map文件。
+    "declaration": false, // 是否需要生成定义文件d.ts，设置为true，则生成。
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2020",
-    "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ]
+    "preserveConstEnums": true, // 保留 const 和 enum 声明
+    "target": "es2020", //  用于指定生成代码的兼容版本，可以从es3,es5,es2015,es6中选择一个，如果不设置，默认生产的代码兼容到es3。
+    "module": "es2020", //  用于指定模块的代码生成规则，可以使用 commonjs 、 amd 、 umd 、 system 、 es6 、 es2015 、 none 这些选项。
+    "lib": ["es2020", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
