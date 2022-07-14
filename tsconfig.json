@@ -1,4 +1,5 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
+// 参考 https://juejin.cn/post/7082688248845680677
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -6,19 +7,19 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true, // 设置为true时，将强制区分大小写。默认为false。
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
+    "strict": true, // 开启全部严格的类型检查
+    "noImplicitOverride": true, // 如果为true，检查子类继承自基类时，其重载的函数命名与基类的函数不同步问题，就是说子类重写父类中的函数时必须在函数前面添加override修饰符，不是重装的不要加override, 默认：false
+    "noPropertyAccessFromIndexSignature": true, // 如果为true，不允许使用点语法来访问未定义的字段,应该用中括号的形式访问data['name']，默认：false。
+    "noImplicitReturns": true, // 如果为true, 检查设置返回值类型的函数的所有返回路径中是否都有返回值，如果其中一条路径没有返回值，则会咋在定义返回值类型处提出警告，默认值为false。
+    "noFallthroughCasesInSwitch": true, // 如果为true, 检查switch中是否有case中没有使用break跳出switch，默认为false。
     "noImplicitAny": true, // 当表达式和申明 类型为any时，是否需要发出警告，设置true，则不警告
     "removeComments": false, // 用于指定是否需要输出注释，设置为true，则不输出注释
     "sourceMap": true, // 是否生成SourceMap的开关，如果设置为true，则会生成.map文件。
     "declaration": false, // 是否需要生成定义文件d.ts，设置为true，则生成。
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
+    "downlevelIteration": true, // 允许以“ ES5”或“ ES3”为目标时,在“ for-of”,传播、解构中为可迭代项提供支持
+    "experimentalDecorators": true, // 用于指定是否启用实验性的装饰器特性
+    "moduleResolution": "node", // 用于选择模块解析策略，有“node”和“classic”两种类型
+    "importHelpers": true, // 是否引入tslib里的复制工具函数
     "preserveConstEnums": true, // 保留 const 和 enum 声明
     "target": "es2020", //  用于指定生成代码的兼容版本，可以从es3,es5,es2015,es6中选择一个，如果不设置，默认生产的代码兼容到es3。
     "module": "es2020", //  用于指定模块的代码生成规则，可以使用 commonjs 、 amd 、 umd 、 system 、 es6 、 es2015 、 none 这些选项。
