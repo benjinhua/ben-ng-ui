@@ -23,11 +23,16 @@ registerLocaleData(zh);
 
 // @NgModule装饰器，@NgModule接受一个元数据对象，告诉Angular如何编译和启动应用
 @NgModule({
-  declarations: [AppComponent, LayoutComponent, Day2Component, Day1Component] /* 配置当前项目运行的组件 */,
+  declarations: [
+    AppComponent,
+    LayoutComponent,
+    Day2Component,
+    Day1Component,
+  ] /* 配置当前项目运行的组件 */,
   imports: [
     /* 配置当前模块运行依赖的其他模块 */ BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule, //引入表单
     HttpClientModule,
     BrowserAnimationsModule,
   ],

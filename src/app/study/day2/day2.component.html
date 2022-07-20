@@ -1,1 +1,45 @@
 <p>day2 works!</p>
+
+<ul>
+  <li *ngFor="let item of arr">
+    {{ item }}
+  </li>
+</ul>
+<ol>
+  <li *ngFor="let item of list">{{ item }}</li>
+</ol>
+<h1>引入图片</h1>
+<img src="assets/images/1.jpeg" alt="引入图片" />
+<img [src]="picUrl" alt="引入图片" />
+<hr />
+
+<h1>循环数据显示数据索引</h1>
+<ul>
+  <li *ngFor="let item of arr; let key = index">{{ item }}-------{{ key }}</li>
+</ul>
+<h1>*ngSwitch</h1>
+<ul [ngSwitch]="orderStatus">
+  <li *ngSwitchCase="1">111</li>
+  <li *ngSwitchCase="2">222</li>
+</ul>
+<hr />
+
+<h1>属性[ngClass]、[ngStyle]</h1>
+<div [ngClass]="{ red: orderStatus === 1 }">ngClass</div>
+<div [ngStyle]="{ color: 'red' }">ngStyle</div>
+
+<hr />
+
+<h1>管道</h1>
+<div>{{ today | date: 'yyyy-MM-dd HH:mm ss' }}</div>
+
+<hr />
+<h1>事件</h1>
+<button (click)="run()">执行方法</button>
+<hr />
+<h1>表单事件 事件对象</h1>
+<input type="text" (change)="inputChange($event)" />
+
+<hr />
+<h1>双向数据绑定--MVVM 只是针对表单 -- {{ inputVal }}</h1>
+<input type="text" [(ngModel)]="inputVal" />
