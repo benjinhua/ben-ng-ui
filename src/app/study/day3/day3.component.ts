@@ -9,6 +9,19 @@ export class Day3Component implements OnInit {
   public peopleInfo: any = {
     name: 'zhangsan',
     sex: 1,
+    cityList: ['benjing', 'shanghai', 'nanjing'],
+    city: '',
+    hobby: [
+      {
+        title: 'eat',
+        checked: false,
+      },
+      {
+        title: 'sleep',
+        checked: true,
+      },
+    ],
+    mark: '1111',
   };
 
   constructor() {}

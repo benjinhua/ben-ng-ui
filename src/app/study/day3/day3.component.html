@@ -17,9 +17,39 @@
         [(ngModel)]="peopleInfo.sex"
       />woman
     </li>
+    <li>
+      <select name="city" id="city" [(ngModel)]="peopleInfo.city">
+        <option *ngFor="let item of peopleInfo.cityList" [value]="item">
+          {{ item }}
+        </option>
+      </select>
+    </li>
+    <li>
+      <span *ngFor="let item of peopleInfo.hobby; let key = index">
+        <input
+          type="checkbox"
+          [id]="'check' + key"
+          [(ngModel)]="item.checked"
+        />
+        <label [for]="'check' + key">{{ item.title }}</label>
+      </span>
+    </li>
+    <li>
+      <textarea
+        name="mark"
+        id="mark"
+        cols="30"
+        rows="10"
+        [(ngModel)]="peopleInfo.mark"
+      ></textarea>
+    </li>
   </ul>
 
-  <div>name: {{ peopleInfo.name }}, sex: {{ peopleInfo.sex }},</div>
+  <div>
+    name: {{ peopleInfo.name }}, sex: {{ peopleInfo.sex }}, city：{{
+      peopleInfo.city
+    }}, hobby:
+  </div>
 </div>
 <br />
 <br />
