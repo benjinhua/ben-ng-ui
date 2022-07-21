@@ -53,6 +53,16 @@
 </div>
 <br />
 <br />
+
+<h1>todoList组件</h1>
+<div>
+  <input type="text" [(ngModel)]="keyword" />
+  <button type="button" (click)="doSearch()">搜索</button>
+  <hr />
+  <ul>
+    <li *ngFor="let item of searchList">{{ item }}</li>
+  </ul>
+</div>
 <br />
 <br />
 <br />

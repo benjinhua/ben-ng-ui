@@ -23,8 +23,14 @@ export class Day3Component implements OnInit {
     ],
     mark: '1111',
   };
+  public keyword: string = '';
+  public searchList: string[] = [];
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  doSearch() {
+    this.searchList.push(this.keyword);
+  }
 }
