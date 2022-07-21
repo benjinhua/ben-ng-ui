@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Day2Component } from './study/day2/day2.component';
 import { Day1Component } from './study/day1/day1.component';
+import { Day3Component } from './study/day3/day3.component';
 
 registerLocaleData(zh);
 
@@ -28,6 +29,7 @@ registerLocaleData(zh);
     LayoutComponent,
     Day2Component,
     Day1Component,
+    Day3Component,
   ] /* 配置当前项目运行的组件 */,
   imports: [
     /* 配置当前模块运行依赖的其他模块 */ BrowserModule,

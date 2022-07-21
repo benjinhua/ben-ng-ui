@@ -1,0 +1,28 @@
+<p>day3 works!</p>
+<h1>人员登记系统</h1>
+<div class="people_list">
+  <ul>
+    <li><input type="text" [(ngModel)]="peopleInfo.name" /></li>
+    <li>
+      <input
+        type="radio"
+        name="sex"
+        [value]="1"
+        [(ngModel)]="peopleInfo.sex"
+      />man
+      <input
+        type="radio"
+        name="sex"
+        [value]="2"
+        [(ngModel)]="peopleInfo.sex"
+      />woman
+    </li>
+  </ul>
+
+  <div>name: {{ peopleInfo.name }}, sex: {{ peopleInfo.sex }},</div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
