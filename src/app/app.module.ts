@@ -20,6 +20,9 @@ import { Day2Component } from './study/day2/day2.component';
 import { Day1Component } from './study/day1/day1.component';
 import { Day3Component } from './study/day3/day3.component';
 
+//引入配置服务
+import { StorageService } from './services/storage.service';
+
 registerLocaleData(zh);
 
 // @NgModule装饰器，@NgModule接受一个元数据对象，告诉Angular如何编译和启动应用
@@ -38,7 +41,10 @@ registerLocaleData(zh);
     HttpClientModule,
     BrowserAnimationsModule,
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }] /* 配置项目所需要的服务 */,
+  providers: [
+    { provide: NZ_I18N, useValue: zh_CN },
+    StorageService,
+  ] /* 配置项目所需要的服务 */,
   bootstrap: [
     AppComponent,
   ] /* 指定应用的主视图（根组件）通过引导根AppModule来启动应用，这里一般写的是根组件 */,
