@@ -22,6 +22,7 @@ import { Day3Component } from './study/day3/day3.component';
 
 //引入配置服务
 import { StorageService } from './services/storage.service';
+import { Day4Component } from './study/day4/day4.component';
 
 registerLocaleData(zh);
 
@@ -33,6 +34,7 @@ registerLocaleData(zh);
     Day2Component,
     Day1Component,
     Day3Component,
+    Day4Component,
   ] /* 配置当前项目运行的组件 */,
   imports: [
     /* 配置当前模块运行依赖的其他模块 */ BrowserModule,
