@@ -6,7 +6,11 @@ import { Injectable } from '@angular/core';
 export class StorageService {
   constructor() {}
 
-  get() {
-    alert(1);
+  // 数据持久化
+  set(key: string, value: string) {
+    localStorage.setItem(key, JSON.stringify(value));
+  }
+  get(key: string) {
+    return JSON.parse(localStorage.getItem(key)!);
   }
 }
