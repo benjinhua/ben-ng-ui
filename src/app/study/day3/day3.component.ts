@@ -34,4 +34,7 @@ export class Day3Component implements OnInit {
   doSearch() {
     this.searchList.push(this.keyword);
   }
+  showRun() {
+    console.log('我是子组件的方法');
+  }
 }
