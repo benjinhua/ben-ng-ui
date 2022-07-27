@@ -13,7 +13,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { zh_CN } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; // 双向数据绑定必须引用
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Day2Component } from './study/day2/day2.component';
@@ -26,6 +26,7 @@ import { Day4Component } from './study/day4/day4.component';
 import { Day5Component } from './study/day5/day5.component';
 import { ChildComponentComponent } from './study/components/child-component/child-component.component';
 import { Day6Component } from './study/day6/day6.component';
+import { Day7Component } from './study/day7/day7.component';
 
 registerLocaleData(zh);
 
@@ -41,6 +42,7 @@ registerLocaleData(zh);
     Day5Component,
     ChildComponentComponent,
     Day6Component,
+    Day7Component,
   ] /* 配置当前项目运行的组件 */,
   imports: [
     /* 配置当前模块运行依赖的其他模块 */ BrowserModule,
