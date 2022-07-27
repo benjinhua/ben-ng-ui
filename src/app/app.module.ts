@@ -22,6 +22,7 @@ import { Day3Component } from './study/day3/day3.component';
 
 //引入配置服务
 import { StorageService } from './services/storage.service';
+import { RequestService } from './services/request.service';
 import { Day4Component } from './study/day4/day4.component';
 import { Day5Component } from './study/day5/day5.component';
 import { ChildComponentComponent } from './study/components/child-component/child-component.component';
@@ -54,6 +55,7 @@ registerLocaleData(zh);
   providers: [
     { provide: NZ_I18N, useValue: zh_CN },
     StorageService,
+    RequestService,
   ] /* 配置项目所需要的服务 */,
   bootstrap: [
     AppComponent,
