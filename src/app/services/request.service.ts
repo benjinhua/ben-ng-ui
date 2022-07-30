@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Observable, observable } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { Observable, observable } from "rxjs";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class RequestService {
   constructor() {}
@@ -11,7 +11,7 @@ export class RequestService {
   getRxjsData() {
     return new Observable((observer) => {
       setTimeout(() => {
-        var userName = 'zhangsan--observer';
+        var userName = "zhangsan--observer";
         observer.next(userName);
       }, 4000);
     });
@@ -21,9 +21,11 @@ export class RequestService {
   getRxjsIntervalData() {
     return new Observable((observer) => {
       setInterval(() => {
-        var userName = 'zhangsan--observer--setInterval';
+        var userName = "zhangsan--observer--setInterval";
         observer.next(userName);
       }, 1000);
     });
   }
+
+  // rxjs完整请求数据
 }
