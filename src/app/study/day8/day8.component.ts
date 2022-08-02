@@ -10,8 +10,8 @@ export class Day8Component implements OnInit {
   constructor(public request: RequestService) {}
 
   ngOnInit(): void {
-    var streamInterval = this.request.getRxjsIntervalData();
-    streamInterval.subscribe((data) => {
+    var stream = this.request.getRxjsCompleteData();
+    stream.subscribe((data) => {
       console.log(data);
     });
   }

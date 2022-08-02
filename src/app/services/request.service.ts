@@ -28,4 +28,10 @@ export class RequestService {
   }
 
   // rxjs完整请求数据
+  getRxjsCompleteData() {
+    return new Observable((observer) => {
+      var userName = "zhangsan--observer--setInterval";
+      observer.next(userName);
+    });
+  }
 }
