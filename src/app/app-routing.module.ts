@@ -1,10 +1,32 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 
-const routes: Routes = [];
+import { Day7Component } from "./study/day7/day7.component";
+import { Day8Component } from "./study/day8/day8.component";
+import { Day9Component } from "./study/day9/day9.component";
+
+const routes: Routes = [
+  {
+    path: "day7",
+    component: Day7Component,
+  },
+  {
+    path: "day8",
+    component: Day8Component,
+  },
+  {
+    path: "day9",
+    component: Day9Component,
+  },
+  // 匹配不到路由，默认跳转
+  {
+    path: "**" /* 任意的路由 */,
+    redirectTo: "day9",
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
