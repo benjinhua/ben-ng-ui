@@ -1,34 +1,35 @@
 // 这个文件是Angular根模块，告诉angular如何组装应用
 
 // Angular核心模块
-import { NgModule } from '@angular/core';
+import { NgModule } from "@angular/core";
 // 浏览器解析的模块
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from "./app-routing.module";
 // 根组件
-import { AppComponent } from './app.component';
-import { LayoutComponent } from './layout/layout.component';
-import { NZ_I18N } from 'ng-zorro-antd/i18n';
-import { zh_CN } from 'ng-zorro-antd/i18n';
-import { registerLocaleData } from '@angular/common';
-import zh from '@angular/common/locales/zh';
-import { FormsModule } from '@angular/forms'; // 双向数据绑定必须引用
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Day2Component } from './study/day2/day2.component';
-import { Day1Component } from './study/day1/day1.component';
-import { Day3Component } from './study/day3/day3.component';
+import { AppComponent } from "./app.component";
+import { LayoutComponent } from "./layout/layout.component";
+import { NZ_I18N } from "ng-zorro-antd/i18n";
+import { zh_CN } from "ng-zorro-antd/i18n";
+import { registerLocaleData } from "@angular/common";
+import zh from "@angular/common/locales/zh";
+import { FormsModule } from "@angular/forms"; // 双向数据绑定必须引用
+import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { Day2Component } from "./study/day2/day2.component";
+import { Day1Component } from "./study/day1/day1.component";
+import { Day3Component } from "./study/day3/day3.component";
 
 //引入配置服务
-import { StorageService } from './services/storage.service';
-import { RequestService } from './services/request.service';
-import { Day4Component } from './study/day4/day4.component';
-import { Day5Component } from './study/day5/day5.component';
-import { ChildComponentComponent } from './study/components/child-component/child-component.component';
-import { Day6Component } from './study/day6/day6.component';
-import { Day7Component } from './study/day7/day7.component';
-import { Day8Component } from './study/day8/day8.component';
+import { StorageService } from "./services/storage.service";
+import { RequestService } from "./services/request.service";
+import { HttpserviceService } from "./services/httpservice.service";
+import { Day4Component } from "./study/day4/day4.component";
+import { Day5Component } from "./study/day5/day5.component";
+import { ChildComponentComponent } from "./study/components/child-component/child-component.component";
+import { Day6Component } from "./study/day6/day6.component";
+import { Day7Component } from "./study/day7/day7.component";
+import { Day8Component } from "./study/day8/day8.component";
 
 registerLocaleData(zh);
 
@@ -58,6 +59,7 @@ registerLocaleData(zh);
     { provide: NZ_I18N, useValue: zh_CN },
     StorageService,
     RequestService,
+    HttpserviceService,
   ] /* 配置项目所需要的服务 */,
   bootstrap: [
     AppComponent,
