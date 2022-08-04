@@ -31,6 +31,7 @@ import { Day6Component } from "./study/day6/day6.component";
 import { Day7Component } from "./study/day7/day7.component";
 import { Day8Component } from "./study/day8/day8.component";
 import { Day9Component } from './study/day9/day9.component';
+import { Day10Component } from './study/day10/day10.component';
 
 registerLocaleData(zh);
 
@@ -49,6 +50,7 @@ registerLocaleData(zh);
     Day7Component,
     Day8Component,
     Day9Component,
+    Day10Component,
   ] /* 配置当前项目运行的组件 */,
   imports: [
     /* 配置当前模块运行依赖的其他模块 */ BrowserModule,
