@@ -6,6 +6,7 @@ import { Day8Component } from "./study/day8/day8.component";
 import { Day9Component } from "./study/day9/day9.component";
 import { Day10Component } from "./study/day10/day10.component";
 import { Day11Component } from "./study/day11/day11.component";
+import { Day12Component } from "./study/day12/day12.component";
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
         component: Day9Component,
       },
     ],
+  },
+  {
+    path: "day12",
+    component: Day12Component,
   },
   // 匹配不到路由，默认跳转
   {
