@@ -5,6 +5,7 @@ import { Day7Component } from "./study/day7/day7.component";
 import { Day8Component } from "./study/day8/day8.component";
 import { Day9Component } from "./study/day9/day9.component";
 import { Day10Component } from "./study/day10/day10.component";
+import { Day11Component } from "./study/day11/day11.component";
 
 const routes: Routes = [
   {
@@ -22,6 +23,20 @@ const routes: Routes = [
   {
     path: "day10/:name", // 动态路由配置
     component: Day10Component,
+  },
+  {
+    path: "day11", // 动态路由配置
+    component: Day11Component,
+    children: [
+      {
+        path: "day8",
+        component: Day8Component,
+      },
+      {
+        path: "day9",
+        component: Day9Component,
+      },
+    ],
   },
   // 匹配不到路由，默认跳转
   {
