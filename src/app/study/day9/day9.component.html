@@ -1,3 +1,14 @@
 <p>day9 works!</p>
 <a routerLink="/day7">day7</a>
+<br />
 <a [routerLink]="['/day8']">day8</a>
+<br />
+<a [routerLink]="['/day10/', 'zhangsan']">day10-动态路由</a>
+<br />
+<a [routerLink]="['/day10']" [queryParams]="{ name: 'zhangsan' }"
+  >day10-get传值</a
+>
+<br />
+<button (click)="jumpTo()">js跳转路由</button>
+<br />
+<button (click)="jumpGetTo()">get传值js跳转路由</button>

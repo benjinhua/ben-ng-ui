@@ -4,6 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { Day7Component } from "./study/day7/day7.component";
 import { Day8Component } from "./study/day8/day8.component";
 import { Day9Component } from "./study/day9/day9.component";
+import { Day10Component } from "./study/day10/day10.component";
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: "day9",
     component: Day9Component,
+  },
+  {
+    path: "day10/:name", // 动态路由配置
+    component: Day10Component,
   },
   // 匹配不到路由，默认跳转
   {
